@@ -1,0 +1,473 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #d4d4d4
+    color: #333;
+}
+
+/* --- Header e Navegação --- */
+header {
+    background-color: #1a2a4b; /* Azul escuro do logo */
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 120px; /* Ajuste o tamanho do logo */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #e6e6e6; /* Cinza claro para o efeito hover */
+}
+
+/* --- Banner --- */
+.banner {
+    position: relative; /* Isso permite que o texto seja posicionado em cima da imagem */
+    text-align: center;
+    color: white;
+
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+/* --- Seção de Mensagem --- */
+.mensagem {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #ffffff;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mensagem h1 {
+    color: #1a2a4b;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.mensagem p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1a2a4b;
+    color: white;
+    margin-top: 20px;
+}
+
+/* --- Estilo do texto sobre o banner --- */
+.banner-overlay {
+    position: absolute;
+    top: 50%; /* Posiciona verticalmente no centro */
+    left: 50%; /* Posiciona horizontalmente no centro */
+    transform: translate(-50%, -50%); /* Ajuste para centralizar o texto */
+    width: 80%; /* Ajuste a largura do container de texto */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para o texto ficar mais visível */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.banner-overlay h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.banner-overlay p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+/* --- Seção de Jogos --- */
+.jogos {
+    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.jogos h1 {
+    text-align: center;
+    color: #1a2a4b;
+    margin-bottom: 30px;
+}
+
+.jogo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+}
+
+.jogo-item .info h2 {
+    color: #333;
+    font-size: 1.5em;
+    margin: 0 0 10px 0;
+}
+
+.jogo-item .info p {
+    margin: 5px 0;
+}
+
+.jogo-item .placar p {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #1a2a4b;
+}
+
+/* Opcional: Adicionar um efeito de hover */
+.jogo-item:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+/* --- Botão de Confirmação --- */
+.confirmar-btn {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.confirmar-btn:hover {
+    background-color: #45a049;
+}
+
+/* --- Estilo do Pop-up (modal) --- */
+.popup {
+    display: none; /* Esconde o pop-up por padrão */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.popup-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.fechar-popup {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.fechar-popup:hover,
+.fechar-popup:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.popup-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.popup-content input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.popup-content button {
+    background-color: #1a2a4b;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+.aviso-form {
+    font-size: 0.8em;
+    color: #888;
+    margin-top: 20px;
+}
+/* --- Seção de Formulário --- */
+.form-container {
+    padding: 40px;
+    max-width: 700px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* --- Estilo do Formulário de Contato --- */
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Adiciona espaço entre os campos */
+    text-align: left;
+}
+
+.form-container label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px; /* Adiciona um pequeno espaço abaixo de cada rótulo */
+    display: block; /* Garante que o rótulo ocupe a largura total */
+}
+/* --- Seção de Galeria de Fotos --- */
+.galeria-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.galeria-container h1 {
+    color: #1a2a4b;
+    margin-bottom: 30px;
+}
+
+.galeria-fotos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+}
+
+.foto-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.foto-item img:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+/* --- Seção de Atletas --- */
+.atletas-main-container {
+    display: flex;
+    justify-content: center;
+    max-width: 1400px;
+    margin: 40px auto;
+    gap: 30px;
+}
+
+/* Menu Lateral */
+.elenco-menu {
+    width: 250px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+}
+
+.elenco-menu h2 {
+    color: #1a2a4b;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.elenco-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.elenco-menu li a {
+    display: block;
+    padding: 8px 0;
+    color: #555;
+    text-decoration: none;
+    border-bottom: 1px solid #eee;
+    transition: color 0.3s;
+}
+
+.elenco-menu li a:hover {
+    color: #1a2a4b;
+    font-weight: bold;
+}
+
+/* Campo de Futebol (área principal) */
+.campo-container {
+    flex-grow: 1; /* Ocupa o espaço restante */
+    max-width: 900px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.campo-container h1 {
+    color: #1a2a4b;
+    margin-bottom: 10px;
+}
+
+.aviso-escalacao {
+    color: #888;
+    margin-bottom: 30px;
+}
+
+.campo {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: 600px;
+    background-color: #4CAF50; /* Verde do campo */
+    border: 5px solid #fff;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.titular-box {
+    position: absolute;
+    top: var(--top);
+    left: var(--left);
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.titular-box p {
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #1a2a4b;
+    margin: 0;
+}
+
+.titular-box .nome-atleta {
+    font-size: 0.8em;
+    color: #555;
+    display: block;
+}
+/* --- Seção de Uniformes e Produtos --- */
+.uniformes-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.uniformes-container h1 {
+    color: #1a2a4b;
+    margin-bottom: 10px;
+}
+
+.uniformes-container p {
+    color: #555;
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+.uniformes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.produto-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+    overflow: hidden;
+}
+
+.produto-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.produto-card h3 {
+    color: #1a2a4b;
+    margin: 15px 0 5px;
+}
+
+.produto-card p {
+    color: #555;
+    padding: 0 15px;
+    font-size: 0.9em;
+}
+
+.btn-ver-mais {
+    display: inline-block;
+    background-color: #1a2a4b;
+    color: white;
+    padding: 10px 20px;
+    margin: 15px 0;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-ver-mais:hover {
+    background-color: #0d1e3a;
+}
+main {
+    background-color: #d4d4d4; /* Garante que a área de conteúdo tenha a mesma cor de fundo */
+}

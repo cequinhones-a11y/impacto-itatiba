@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcar um Contra - Impacto Itatiba FC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo do Impacto Itatiba">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="proximos-jogos.html">Próximos Jogos</a></li>
+                <li><a href="marcar-um-contra.html">Marcar um Contra</a></li>
+                <li><a href="galeria-de-fotos.html">Galeria de Fotos</a></li>
+                <li><a href="atletas.html">Atletas</a></li>
+                <li><a href="uniformes.html">Uniformes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-container">
+    <h1>Marcar um Jogo Contra o Impacto Itatiba</h1>
+    <p>Preencha o formulário abaixo para nos enviar sua proposta de jogo. Entraremos em contato o mais breve possível!</p>
+
+    <form action="https://formspree.io/f/xblavqlb" method="POST">
+        <label for="nome">Nome do Responsável:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="telefone">Telefone (WhatsApp):</label>
+        <input type="tel" id="telefone" name="telefone" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="time">Nome do seu Time:</label>
+        <input type="text" id="time" name="time" required>
+
+        <label for="cidade">Cidade:</label>
+        <input type="text" id="cidade" name="cidade" required>
+
+        <label for="mensagem">Mensagem (opcional):</label>
+        <textarea id="mensagem" name="mensagem" rows="5"></textarea>
+
+        <button type="submit">Enviar Proposta</button>
+    </form>
+    <p class="aviso-form">Ao clicar em "Enviar Proposta", você será levado para o site do Formspree para completar o envio. É um passo de segurança para garantir que você não é um robô.</p>
+</section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Impacto Itatiba Futebol Clube. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

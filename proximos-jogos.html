@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Próximos Jogos - Impacto Itatiba FC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo do Impacto Itatiba">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="proximos-jogos.html">Próximos Jogos</a></li>
+                <li><a href="marcar-um-contra.html">Marcar um Contra</a></li>
+                <li><a href="galeria-de-fotos.html">Galeria de Fotos</a></li>
+                <li><a href="atletas.html">Atletas</a></li>
+                <li><a href="uniformes.html">Uniformes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="jogos">
+            <h1>Próximos Jogos</h1>
+            
+            <div class="jogo-item">
+                <div class="info">
+                    <h2>Impacto Itatiba FC vs. Time Adversário 1</h2>
+                    <p><strong>Data:</strong> DD/MM/AAAA</p>
+                    <p><strong>Hora:</strong> HH:MM</p>
+                    <p><strong>Local:</strong> Nome do Campo ou Local</p>
+                </div>
+                <div class="placar">
+                    <p>Ainda não jogado</p>
+		<button class="confirmar-btn">Confirmar Comparecimento</button>
+    		</div>
+                </div>
+            </div>
+
+            <div class="jogo-item">
+                <div class="info">
+                    <h2>Impacto Itatiba FC vs. Time Adversário 2</h2>
+                    <p><strong>Data:</strong> DD/MM/AAAA</p>
+                    <p><strong>Hora:</strong> HH:MM</p>
+                    <p><strong>Local:</strong> Nome do Campo ou Local</p>
+                </div>
+                <div class="placar">
+                    <p>Aguardando confirmação</p>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Impacto Itatiba Futebol Clube. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+<div id="popup-form" class="popup">
+    <div class="popup-content">
+        <span class="fechar-popup">&times;</span>
+        <h2>Confirmar Comparecimento</h2>
+        <form action="https://formspree.io/f/xblavqlb" method="POST" id="form-confirmacao">
+            <label for="nome">Nome do Atleta:</label>
+            <input type="text" id="nome" name="nome" required>
+            <input type="hidden" name="_subject" value="Confirmação de Comparecimento - Próximo Jogo">
+            <input type="hidden" name="jogo" id="campo-jogo">
+            <button type="submit">Enviar Confirmação</button>
+        </form>
+        <p class="aviso-form">Ao clicar em "Enviar Confirmação", você será levado para o site do Formspree para completar a confirmação. É um passo de segurança para garantir que você não é um robô.</p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</html>
